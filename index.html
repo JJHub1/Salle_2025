@@ -13,6 +13,11 @@
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;overflow:hidden}
   header{position:fixed;top:0;left:0;right:0;height:58px;z-index:30;display:flex;align-items:center;gap:16px;
     padding:0 20px;background:#0b1020;border-bottom:1px solid var(--line)}
+  #toolbar2{position:fixed;top:58px;left:0;right:0;height:54px;z-index:29;display:flex;align-items:center;
+    gap:18px;padding:0 20px;background:#0a0f1c;border-bottom:1px solid var(--line);flex-wrap:nowrap;overflow-x:auto}
+  #toolbar2 .tb-grp{display:flex;align-items:center;gap:9px;flex-shrink:0}
+  #toolbar2 .tb-lbl{font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--dim)}
+  #toolbar2 .tb-div{width:1px;height:28px;background:var(--line);flex-shrink:0}
   header h1{font-size:15px;font-weight:600;margin:0;white-space:nowrap}
   header h1 b{color:var(--hi)}
   header h1 .tag{color:var(--dim);font-weight:500;font-size:11.5px;border:1px solid var(--line);padding:2px 8px;border-radius:6px;margin-left:8px}
@@ -30,20 +35,20 @@
   .seg button.on.all{background:#c3cadb}
   .seg button.on.closed{background:var(--hi)}
   .seg button.on.open{background:var(--lo)}
-  #detail{position:fixed;top:58px;left:0;right:0;height:120px;z-index:20;background:#0d1320;border-bottom:1px solid var(--line);padding:13px 20px;overflow:hidden}
-  .d-row{display:flex;gap:20px;align-items:stretch;height:100%}
-  .d-left{display:flex;gap:14px;align-items:center;flex-shrink:0;max-width:50%}
-  .d-chips{display:flex;flex-direction:column;gap:6px;min-width:150px}
-  .d-chips .t{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--dim)}
+  #detail{position:fixed;top:112px;left:0;right:0;height:150px;z-index:20;background:#0d1320;border-bottom:1px solid var(--line);padding:15px 20px;overflow:hidden}
+  .d-row{display:flex;gap:22px;align-items:stretch;height:100%}
+  .d-left{display:flex;gap:16px;align-items:center;flex-shrink:0;max-width:52%}
+  .d-chips{display:flex;flex-direction:column;gap:8px;min-width:170px}
+  .d-chips .t{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--dim)}
   .chips{display:flex;flex-wrap:wrap;gap:6px;max-width:320px}
-  .chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:14px;font-size:11.5px;font-weight:600;background:#161d30;border:1px solid var(--line);cursor:default;max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .chip .gl{font-size:9px;font-weight:800;letter-spacing:.4px;opacity:.85}
-  .chip .x{cursor:pointer;color:var(--muted);font-weight:700;margin-left:2px}
+  .chip{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:16px;font-size:13.5px;font-weight:700;background:#161d30;border:1px solid var(--line);cursor:default;max-width:320px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .chip .gl{font-size:10px;font-weight:800;letter-spacing:.4px;opacity:.9}
+  .chip .x{cursor:pointer;color:var(--muted);font-weight:700;margin-left:3px;font-size:15px}
   .chip .x:hover{color:#fff}
-  .d-stats{display:flex;gap:9px}
-  .stat{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;text-align:center;min-width:66px}
-  .stat .n{font-size:18px;font-weight:800;line-height:1}
-  .stat .l{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:4px}
+  .d-stats{display:flex;gap:11px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 18px;text-align:center;min-width:88px}
+  .stat .n{font-size:26px;font-weight:800;line-height:1}
+  .stat .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:5px}
   .d-conn{flex:1;min-width:0;display:flex;flex-direction:column;overflow:hidden}
   .d-conn .hd{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--dim);margin-bottom:6px}
   .d-pills{display:flex;gap:7px;flex-wrap:wrap;overflow-y:auto;align-content:flex-start}
@@ -60,20 +65,70 @@
   .d-idle .sw{width:18px;height:5px;border-radius:3px}
   .d-close{position:absolute;top:9px;right:15px;cursor:pointer;color:var(--muted);font-size:20px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;border-radius:6px;z-index:2}
   .d-close:hover{background:var(--panel);color:var(--txt)}
-  #graph{position:fixed;top:179px;left:0;right:0;bottom:0;overflow-y:auto;overflow-x:hidden}
+  #graph{position:fixed;top:263px;left:0;right:0;bottom:0;overflow-y:auto;overflow-x:hidden}
   svg{display:block}
   .band-box{fill:var(--band);stroke:var(--bandbrd);stroke-width:1}
   .band-label{font-size:11.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
   .band-desc{fill:#56607e;font-size:11px}
   .plink{fill:none;stroke:#f472b6;stroke-opacity:.45;stroke-width:1.2px}
+  .clink{fill:none;stroke:#9fb4ff;stroke-opacity:.4;stroke-width:1.4px}
   .spine{fill:none;stroke:#e8ecf5;stroke-opacity:.55;stroke-width:2px;stroke-dasharray:1 0}
   .node{cursor:pointer}
   .node .pill{stroke-width:1.5px;transition:stroke-width .15s}
   .node .lbl{fill:#f3f6fc;font-size:12px;font-weight:600;pointer-events:none}
-  .node .cnt{font-size:14px;font-weight:800;pointer-events:none;text-anchor:middle;fill:#fff;paint-order:stroke;stroke:#0a0e1a;stroke-width:3px}
+  .node .cntL{font-size:14px;font-weight:800;pointer-events:none;text-anchor:start;fill:#fff;paint-order:stroke;stroke:#0a0e1a;stroke-width:3px}
+  .node .cntR{font-size:13px;font-weight:800;pointer-events:none;text-anchor:end;fill:#34d399;paint-order:stroke;stroke:#0a0e1a;stroke-width:3px}
+  .node.weak .cntR{fill:#ff6b6b}
   .node .track{fill:#ffffff14}
   .node.dim{opacity:.16}
   .node.active .pill{stroke-width:3.5px}
+  /* destaque forte pra combinação fraca (abaixo do mínimo) */
+  .node.weak{filter:drop-shadow(0 0 7px rgba(255,70,70,.85))}
+  .node.weak .pill{stroke:#ff3b3b!important;stroke-width:3.5px!important;fill:#ff3b3b!important;fill-opacity:.32!important}
+  .node.weak .lbl{fill:#ffe2e2}
+  .minbox{display:flex;align-items:center;gap:5px;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:5px 9px;font-size:12px;color:var(--muted);white-space:nowrap}
+  .minbox input{width:46px;background:#0a0e1a;border:1px solid var(--line);color:#ff5b5b;font-weight:800;font-size:13px;border-radius:6px;padding:3px 6px;outline:none;text-align:center}
+  .minbox input:focus{border-color:#ff5b5b}
+  .abtn{border:none;border-radius:9px;padding:7px 14px;font-size:12.5px;font-weight:700;cursor:pointer;white-space:nowrap}
+  .abtn.apply{background:#ff3b3b;color:#fff}
+  .abtn.apply:hover{background:#ff5b5b}
+  .abtn.apply.on{box-shadow:0 0 0 2px rgba(255,59,59,.5)}
+  .abtn.reset{background:var(--panel);color:var(--muted);border:1px solid var(--line)}
+  .abtn.reset:hover{color:var(--txt);border-color:#34406a}
+  /* ---- Recomendação (top-N melhores combinações) ---- */
+  .recobox{display:flex;align-items:center;gap:5px;background:var(--panel);border:1px solid #4a3c12;border-radius:9px;padding:5px 9px;font-size:12px;color:#d9b44a;white-space:nowrap}
+  .recobox input{width:40px;background:#0a0e1a;border:1px solid #4a3c12;color:#ffd24a;font-weight:800;font-size:13px;border-radius:6px;padding:3px 6px;outline:none;text-align:center}
+  .recobox input:focus{border-color:#ffd24a}
+  .abtn.recob{background:#caa12c;color:#1a1400}
+  .abtn.recob:hover{background:#ffd24a}
+  .abtn.recob.on{box-shadow:0 0 0 2px rgba(255,210,74,.55)}
+  /* nó dourado em modo recomendação */
+  .node.reco{filter:drop-shadow(0 0 7px rgba(255,210,74,.8))}
+  .node.reco .pill{stroke:#ffd24a!important;stroke-width:3px!important;fill:#ffd24a!important;fill-opacity:.18!important}
+  .node.reco .lbl{fill:#fff6dc}
+  .node.reco .cntR{fill:#ffd24a}
+  /* linhas e badges de ranking */
+  .recolink{fill:none;stroke:#ffd24a;stroke-opacity:.7;stroke-width:2.4px}
+  .recobadge-bg{fill:#caa12c;stroke:#1a1400;stroke-width:1.5px}
+  .recobadge{fill:#1a1400;font-size:14px;font-weight:900;pointer-events:none}
+  /* painel de recomendação — rodapé */
+  #reco-panel{position:fixed;bottom:0;left:0;right:0;height:82px;z-index:25;display:none;
+    background:#0d1320;border-top:2px solid #caa12c;padding:0 20px;
+    align-items:center;gap:14px;overflow-x:auto;overflow-y:hidden}
+  #reco-panel.visible{display:flex}
+  .reco-title{font-size:12px;font-weight:800;color:#ffd24a;white-space:nowrap;letter-spacing:.5px;flex-shrink:0}
+  .reco-title small{display:block;font-size:10px;color:var(--dim);font-weight:500;letter-spacing:0;margin-top:2px}
+  .reco-card{display:flex;align-items:center;gap:8px;background:#15110466;border:1px solid #4a3c12;
+    border-radius:11px;padding:8px 14px;white-space:nowrap;flex-shrink:0;min-width:0;cursor:default}
+  .reco-rk{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;
+    border-radius:50%;background:#caa12c;color:#1a1400;font-weight:900;font-size:12px;flex-shrink:0}
+  .reco-city{font-weight:800;color:#fff6dc;font-size:13px}
+  .reco-sep{color:var(--dim);font-weight:700;font-size:11px}
+  .reco-esc{color:#cdd4e6;font-size:12px;max-width:200px;overflow:hidden;text-overflow:ellipsis}
+  .reco-conv{font-weight:900;color:#ffd24a;font-size:16px;margin-left:4px}
+  .reco-vol{font-size:10.5px;color:var(--muted);margin-left:2px}
+  .reco-close{margin-left:auto;cursor:pointer;color:var(--muted);font-size:20px;flex-shrink:0;padding:4px 6px;border-radius:6px}
+  .reco-close:hover{color:#fff;background:var(--panel)}
   #graph::-webkit-scrollbar{width:10px}
   #graph::-webkit-scrollbar-thumb{background:#1c2540;border-radius:5px}
 </style>
@@ -145,8 +200,28 @@
   </div>
 </header>
 
+<div id="toolbar2">
+  <div class="tb-grp">
+    <span class="tb-lbl">Combinações fracas</span>
+    <div class="minbox" title="Combinações com conversão abaixo deste valor ficam vermelhas">
+      <span>Mín</span><input id="minpct" type="number" value="30" min="0" max="100" step="5"><span>%</span>
+    </div>
+    <button id="btn-apply" class="abtn apply">Aplicar</button>
+    <button id="btn-reset" class="abtn reset">Reset</button>
+  </div>
+  <div class="tb-div"></div>
+  <div class="tb-grp">
+    <span class="tb-lbl" style="color:#d9b44a">Melhores combinações</span>
+    <div class="recobox" title="Mostra as N melhores combinações Cidade × Escopo por conversão">
+      <span>Top</span><input id="reco-n" type="number" value="3" min="1" max="5" step="1"><span>combos</span>
+    </div>
+    <button id="btn-reco" class="abtn recob" title="Destaca as melhores combinações Cidade × Escopo">★ Recomendação</button>
+  </div>
+</div>
+
 <div id="detail"><div id="d-body"></div></div>
 <div id="graph"></div>
+<div id="reco-panel"></div>
 
 <script>
 const DATA = {"total": 193, "closed": 69, "nodes": [{"id": "C:Outros clientes", "band": "cliente", "label": "Outros clientes", "sent": 142, "closed": 46}, {"id": "S:Só enviada", "band": "status", "label": "Não fechadas", "sent": 124, "closed": 0}, {"id": "P:Estudos", "band": "dept", "label": "Estudos", "sent": 88, "closed": 32}, {"id": "P:Projetos", "band": "dept", "label": "Projetos", "sent": 75, "closed": 24}, {"id": "D:Campinas", "band": "cidade", "label": "Campinas", "sent": 72, "closed": 29}, {"id": "S:Fechada", "band": "status", "label": "Fechadas", "sent": 69, "closed": 69}, {"id": "E:RIT", "band": "escopo", "label": "RIT", "sent": 52, "closed": 19}, {"id": "D:Jundiaí", "band": "cidade", "label": "Jundiaí", "sent": 46, "closed": 20}, {"id": "D:Outras cidades", "band": "cidade", "label": "Outras cidades", "sent": 38, "closed": 6}, {"id": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "band": "escopo", "label": "SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "sent": 36, "closed": 8}, {"id": "P:Outros", "band": "dept", "label": "Outros", "sent": 30, "closed": 13}, {"id": "E:EIV/ RIT", "band": "escopo", "label": "EIV/ RIT", "sent": 27, "closed": 9}, {"id": "C:MRV & CO", "band": "cliente", "label": "MRV & CO", "sent": 18, "closed": 8}, {"id": "E:INFRAESTRUTURA DE TRANSPORTE", "band": "escopo", "label": "INFRAESTRUTURA DE TRANSPORTE", "sent": 12, "closed": 5}, {"id": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "band": "escopo", "label": "SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "sent": 12, "closed": 5}, {"id": "D:Paulínia", "band": "cidade", "label": "Paulínia", "sent": 10, "closed": 5}, {"id": "C:ADVENTISTA", "band": "cliente", "label": "ADVENTISTA", "sent": 9, "closed": 5}, {"id": "D:Atibaia", "band": "cidade", "label": "Atibaia", "sent": 8, "closed": 3}, {"id": "D:Hortolândia", "band": "cidade", "label": "Hortolândia", "sent": 7, "closed": 1}, {"id": "E:ESTUDO DE VIABILIDADE AMBIENTAL", "band": "escopo", "label": "ESTUDO DE VIABILIDADE AMBIENTAL", "sent": 7, "closed": 3}, {"id": "E:ESTUDO DE TRÁFEGO", "band": "escopo", "label": "ESTUDO DE TRÁFEGO", "sent": 6, "closed": 3}, {"id": "C:ARBÓREA", "band": "cliente", "label": "ARBÓREA", "sent": 6, "closed": 1}, {"id": "D:Valinhos", "band": "cidade", "label": "Valinhos", "sent": 4, "closed": 0}, {"id": "D:São Paulo", "band": "cidade", "label": "São Paulo", "sent": 4, "closed": 1}, {"id": "E:SINALIZAÇÃO SEMAFÓRICA", "band": "escopo", "label": "SINALIZAÇÃO SEMAFÓRICA", "sent": 4, "closed": 3}, {"id": "C:DIRECIONAL", "band": "cliente", "label": "DIRECIONAL", "sent": 4, "closed": 1}, {"id": "C:COVABRA", "band": "cliente", "label": "COVABRA", "sent": 4, "closed": 4}, {"id": "D:Ribeirão Preto", "band": "cidade", "label": "Ribeirão Preto", "sent": 4, "closed": 4}, {"id": "C:HOCH", "band": "cliente", "label": "HOCH", "sent": 4, "closed": 3}, {"id": "C:3Z Realty", "band": "cliente", "label": "3Z Realty", "sent": 3, "closed": 1}, {"id": "C:FA OLIVA", "band": "cliente", "label": "FA OLIVA", "sent": 3, "closed": 0}, {"id": "E:ASSESSORIA", "band": "escopo", "label": "ASSESSORIA", "sent": 3, "closed": 2}, {"id": "E:PROJETO GEOMÉTRICO / DRENAGEM DE ÁGUAS PLUVIAIS / PAVIMENTAÇÃO", "band": "escopo", "label": "PROJETO GEOMÉTRICO / DRENAGEM DE ÁGUAS PLUVIAIS / PAVIMENTAÇÃO", "sent": 3, "closed": 2}, {"id": "E:PROJETO GEOMÉTRICO E TERRAPLENAGEM/ DRENAGEM DE ÁGUAS PLUVIAIS/ SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "band": "escopo", "label": "PROJETO GEOMÉTRICO E TERRAPLENAGEM/ DRENAGEM DE ÁGUAS PLUVIAIS/ SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "sent": 2, "closed": 0}, {"id": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / SINALIZAÇÃO SEMAFÓRICA/ INFRAESTRUTURA DE TRANSPORTE", "band": "escopo", "label": "SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / SINALIZAÇÃO SEMAFÓRICA/ INFRAESTRUTURA DE TRANSPORTE", "sent": 2, "closed": 1}, {"id": "E:INDICAÇÃO DE PAVIMENTAÇÃO/ SINALIZAÇÃO VIÁRIA/ ACESSIBILIDADE", "band": "escopo", "label": "INDICAÇÃO DE PAVIMENTAÇÃO/ SINALIZAÇÃO VIÁRIA/ ACESSIBILIDADE", "sent": 2, "closed": 1}, {"id": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE", "band": "escopo", "label": "SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE", "sent": 2, "closed": 1}, {"id": "E:CROQUI PARA IMPLANTAÇÃO DE ABRIGOS", "band": "escopo", "label": "CROQUI PARA IMPLANTAÇÃO DE ABRIGOS", "sent": 2, "closed": 0}, {"id": "E:CONSULTORIA URBANÍSTICA", "band": "escopo", "label": "CONSULTORIA URBANÍSTICA", "sent": 2, "closed": 1}, {"id": "E:EIV", "band": "escopo", "label": "EIV", "sent": 2, "closed": 0}, {"id": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE/ SINALIZAÇÃO SEMAFÓRICA", "band": "escopo", "label": "SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE/ SINALIZAÇÃO SEMAFÓRICA", "sent": 2, "closed": 1}, {"id": "E:GRAPROHAB", "band": "escopo", "label": "GRAPROHAB", "sent": 2, "closed": 0}, {"id": "E:INFRAESTRUTURA DE TRANSPORTE / SINALIZAÇÃO SEMAFÓRICA", "band": "escopo", "label": "INFRAESTRUTURA DE TRANSPORTE / SINALIZAÇÃO SEMAFÓRICA", "sent": 2, "closed": 0}, {"id": "E:PROJETO GEOMÉTRICO", "band": "escopo", "label": "PROJETO GEOMÉTRICO", "sent": 1, "closed": 0}, {"id": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE / PAVIMENTAÇÃO", "band": "escopo", "label": "SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE / PAVIMENTAÇÃO", "sent": 1, "closed": 0}, {"id": "E:REFORMULAÇÃO ACESSO E LAYOUT VAGAS", "band": "escopo", "label": "REFORMULAÇÃO ACESSO E LAYOUT VAGAS", "sent": 1, "closed": 1}, {"id": "E:CONFORMIDADE VIÁRIA", "band": "escopo", "label": "CONFORMIDADE VIÁRIA", "sent": 1, "closed": 1}, {"id": "E:AUTORIZAÇÃO DE SUPRESSÃO", "band": "escopo", "label": "AUTORIZAÇÃO DE SUPRESSÃO", "sent": 1, "closed": 1}, {"id": "E:CÂMERA MONITORAMENTO", "band": "escopo", "label": "CÂMERA MONITORAMENTO", "sent": 1, "closed": 0}, {"id": "E:PROJETO GEOMÉTRICO / PAVIMENTAÇÃO", "band": "escopo", "label": "PROJETO GEOMÉTRICO / PAVIMENTAÇÃO", "sent": 1, "closed": 1}, {"id": "E:RELATÓRIO DE IMPACTO NO SISTEMA DE MOBILIDADE", "band": "escopo", "label": "RELATÓRIO DE IMPACTO NO SISTEMA DE MOBILIDADE", "sent": 1, "closed": 0}, {"id": "E:MODERNIZÃO SEMAFÓRICA", "band": "escopo", "label": "MODERNIZÃO SEMAFÓRICA", "sent": 1, "closed": 0}, {"id": "E:REVISÃO RIT", "band": "escopo", "label": "REVISÃO RIT", "sent": 1, "closed": 1}, {"id": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE / INFRAESTRUTURA DE TRANSPORTE", "band": "escopo", "label": "SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE / INFRAESTRUTURA DE TRANSPORTE", "sent": 1, "closed": 0}], "propostas": [{"id": "Q:0", "num": "621/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:1", "num": "622/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:2", "num": "623/2025", "cli": "C:MRV & CO", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:3", "num": "624/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:4", "num": "625/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Fechada", "fech": true}, {"id": "Q:5", "num": "626/2025", "cli": "C:MRV & CO", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:6", "num": "627/2025", "cli": "C:Outros clientes", "cid": "D:Paulínia", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Fechada", "fech": true}, {"id": "Q:7", "num": "629/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:8", "num": "630/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:9", "num": "631/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Outros", "esc": "E:PROJETO GEOMÉTRICO E TERRAPLENAGEM/ DRENAGEM DE ÁGUAS PLUVIAIS/ SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:10", "num": "632/2025", "cli": "C:Outros clientes", "cid": "D:Valinhos", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:11", "num": "634/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "st": "S:Fechada", "fech": true}, {"id": "Q:12", "num": "635/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:13", "num": "636/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / SINALIZAÇÃO SEMAFÓRICA/ INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:14", "num": "637/2025", "cli": "C:3Z Realty", "cid": "D:Campinas", "dept": "P:Outros", "esc": "E:INDICAÇÃO DE PAVIMENTAÇÃO/ SINALIZAÇÃO VIÁRIA/ ACESSIBILIDADE", "st": "S:Fechada", "fech": true}, {"id": "Q:15", "num": "638/2025", "cli": "C:MRV & CO", "cid": "D:Campinas", "dept": "P:Outros", "esc": "E:INDICAÇÃO DE PAVIMENTAÇÃO/ SINALIZAÇÃO VIÁRIA/ ACESSIBILIDADE", "st": "S:Só enviada", "fech": false}, {"id": "Q:16", "num": "639/2025", "cli": "C:FA OLIVA", "cid": "D:Jundiaí", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:17", "num": "640/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:18", "num": "641/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:19", "num": "642/2025 I", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:20", "num": "644/2025", "cli": "C:FA OLIVA", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:ESTUDO DE TRÁFEGO", "st": "S:Só enviada", "fech": false}, {"id": "Q:21", "num": "647/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:22", "num": "648/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:23", "num": "649/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Outros", "esc": "E:PROJETO GEOMÉTRICO", "st": "S:Só enviada", "fech": false}, {"id": "Q:24", "num": "650/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:25", "num": "651/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:26", "num": "652/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:27", "num": "653/2025", "cli": "C:Outros clientes", "cid": "D:Hortolândia", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:28", "num": "654/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:29", "num": "655/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:30", "num": "656/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:31", "num": "657/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:32", "num": "658/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:33", "num": "659/2025", "cli": "C:MRV & CO", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:34", "num": "660/2025", "cli": "C:MRV & CO", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:35", "num": "661/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:36", "num": "662/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:37", "num": "663/2025 I", "cli": "C:MRV & CO", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "st": "S:Fechada", "fech": true}, {"id": "Q:38", "num": "664/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:39", "num": "665/2025", "cli": "C:MRV & CO", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:40", "num": "666/2025 I", "cli": "C:MRV & CO", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE", "st": "S:Só enviada", "fech": false}, {"id": "Q:41", "num": "667/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:42", "num": "669/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:43", "num": "670/2025 I", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:44", "num": "671/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Outros", "esc": "E:CROQUI PARA IMPLANTAÇÃO DE ABRIGOS", "st": "S:Só enviada", "fech": false}, {"id": "Q:45", "num": "672/2025", "cli": "C:Outros clientes", "cid": "D:São Paulo", "dept": "P:Outros", "esc": "E:CROQUI PARA IMPLANTAÇÃO DE ABRIGOS", "st": "S:Só enviada", "fech": false}, {"id": "Q:46", "num": "673/2025", "cli": "C:ARBÓREA", "cid": "D:Campinas", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:47", "num": "674/2025", "cli": "C:Outros clientes", "cid": "D:Valinhos", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:48", "num": "675/2025", "cli": "C:Outros clientes", "cid": "D:Paulínia", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Fechada", "fech": true}, {"id": "Q:49", "num": "676/2025", "cli": "C:Outros clientes", "cid": "D:Paulínia", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:50", "num": "677/2025", "cli": "C:Outros clientes", "cid": "D:Paulínia", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:51", "num": "678/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:52", "num": "679/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:53", "num": "680/2025", "cli": "C:MRV & CO", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Fechada", "fech": true}, {"id": "Q:54", "num": "681/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:55", "num": "684/2025", "cli": "C:Outros clientes", "cid": "D:Hortolândia", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:56", "num": "685/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:57", "num": "686/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO SEMAFÓRICA", "st": "S:Fechada", "fech": true}, {"id": "Q:58", "num": "687/2025 I", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:59", "num": "688/2025", "cli": "C:ARBÓREA", "cid": "D:Paulínia", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:60", "num": "689/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:61", "num": "690/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:62", "num": "691/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Outros", "esc": "E:CONSULTORIA URBANÍSTICA", "st": "S:Fechada", "fech": true}, {"id": "Q:63", "num": "692/2025 I", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / SINALIZAÇÃO SEMAFÓRICA/ INFRAESTRUTURA DE TRANSPORTE", "st": "S:Fechada", "fech": true}, {"id": "Q:64", "num": "693/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:65", "num": "694/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:66", "num": "695/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:67", "num": "696/2025 I", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:68", "num": "697/2025 I", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE", "st": "S:Fechada", "fech": true}, {"id": "Q:69", "num": "698/2025", "cli": "C:Outros clientes", "cid": "D:Hortolândia", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:70", "num": "700/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:71", "num": "701/2025 I", "cli": "C:DIRECIONAL", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE / PAVIMENTAÇÃO", "st": "S:Só enviada", "fech": false}, {"id": "Q:72", "num": "702/2025 II", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "st": "S:Fechada", "fech": true}, {"id": "Q:73", "num": "703/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE", "st": "S:Fechada", "fech": true}, {"id": "Q:74", "num": "704/2025", "cli": "C:MRV & CO", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:75", "num": "705/2025", "cli": "C:MRV & CO", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:76", "num": "707/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE", "st": "S:Fechada", "fech": true}, {"id": "Q:77", "num": "709/2025", "cli": "C:ADVENTISTA", "cid": "D:São Paulo", "dept": "P:Outros", "esc": "E:ESTUDO DE VIABILIDADE AMBIENTAL", "st": "S:Fechada", "fech": true}, {"id": "Q:78", "num": "711/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:EIV", "st": "S:Só enviada", "fech": false}, {"id": "Q:79", "num": "712/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:80", "num": "713/2025 II", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:81", "num": "714/2025 I", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Outros", "esc": "E:ASSESSORIA", "st": "S:Fechada", "fech": true}, {"id": "Q:82", "num": "716/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:83", "num": "717/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE/ SINALIZAÇÃO SEMAFÓRICA", "st": "S:Fechada", "fech": true}, {"id": "Q:84", "num": "719/2025 I", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:85", "num": "720/2025", "cli": "C:3Z Realty", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:86", "num": "721/2025", "cli": "C:3Z Realty", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:87", "num": "722/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Outros", "esc": "E:GRAPROHAB", "st": "S:Só enviada", "fech": false}, {"id": "Q:88", "num": "723/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Outros", "esc": "E:GRAPROHAB", "st": "S:Só enviada", "fech": false}, {"id": "Q:89", "num": "724/2025 I", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE", "st": "S:Fechada", "fech": true}, {"id": "Q:90", "num": "727/2025 I", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Outros", "esc": "E:PROJETO GEOMÉTRICO / DRENAGEM DE ÁGUAS PLUVIAIS / PAVIMENTAÇÃO", "st": "S:Fechada", "fech": true}, {"id": "Q:91", "num": "728/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:92", "num": "729/2025", "cli": "C:MRV & CO", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:93", "num": "730/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE", "st": "S:Fechada", "fech": true}, {"id": "Q:94", "num": "731/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:95", "num": "732/2025", "cli": "C:Outros clientes", "cid": "D:Paulínia", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:96", "num": "734/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "st": "S:Fechada", "fech": true}, {"id": "Q:97", "num": "735/2025 I", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO SEMAFÓRICA", "st": "S:Fechada", "fech": true}, {"id": "Q:98", "num": "736/2025 I", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "st": "S:Fechada", "fech": true}, {"id": "Q:99", "num": "737/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:100", "num": "738/2025", "cli": "C:COVABRA", "cid": "D:Paulínia", "dept": "P:Outros", "esc": "E:ASSESSORIA", "st": "S:Fechada", "fech": true}, {"id": "Q:101", "num": "739/2025 I", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Outros", "esc": "E:REFORMULAÇÃO ACESSO E LAYOUT VAGAS", "st": "S:Fechada", "fech": true}, {"id": "Q:102", "num": "740/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:103", "num": "741/2025", "cli": "C:ADVENTISTA", "cid": "D:São Paulo", "dept": "P:Outros", "esc": "E:ESTUDO DE VIABILIDADE AMBIENTAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:104", "num": "742/2025", "cli": "C:Outros clientes", "cid": "D:Hortolândia", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:105", "num": "743/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:106", "num": "744/2025", "cli": "C:DIRECIONAL", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:107", "num": "745/2025", "cli": "C:ARBÓREA", "cid": "D:Campinas", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:108", "num": "746/2025", "cli": "C:Outros clientes", "cid": "D:Atibaia", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:109", "num": "747/2025", "cli": "C:COVABRA", "cid": "D:Paulínia", "dept": "P:Outros", "esc": "E:PROJETO GEOMÉTRICO / DRENAGEM DE ÁGUAS PLUVIAIS / PAVIMENTAÇÃO", "st": "S:Fechada", "fech": true}, {"id": "Q:110", "num": "748/2025", "cli": "C:Outros clientes", "cid": "D:Hortolândia", "dept": "P:Outros", "esc": "E:CONFORMIDADE VIÁRIA", "st": "S:Fechada", "fech": true}, {"id": "Q:111", "num": "749/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:112", "num": "749/2025", "cli": "C:MRV & CO", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:113", "num": "751/2025", "cli": "C:Outros clientes", "cid": "D:Atibaia", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:114", "num": "752/2025", "cli": "C:DIRECIONAL", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:115", "num": "753/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:116", "num": "754/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:117", "num": "755/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:118", "num": "756/2025", "cli": "C:MRV & CO", "cid": "D:Jundiaí", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:119", "num": "757/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:120", "num": "758/2025", "cli": "C:COVABRA", "cid": "D:Campinas", "dept": "P:Outros", "esc": "E:AUTORIZAÇÃO DE SUPRESSÃO", "st": "S:Fechada", "fech": true}, {"id": "Q:121", "num": "759/2025", "cli": "C:Outros clientes", "cid": "D:Ribeirão Preto", "dept": "P:Estudos", "esc": "E:ESTUDO DE TRÁFEGO", "st": "S:Fechada", "fech": true}, {"id": "Q:122", "num": "760/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:123", "num": "761/2025", "cli": "C:HOCH", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:124", "num": "762/2025", "cli": "C:HOCH", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:125", "num": "763/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:ESTUDO DE TRÁFEGO", "st": "S:Só enviada", "fech": false}, {"id": "Q:126", "num": "764/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE", "st": "S:Fechada", "fech": true}, {"id": "Q:127", "num": "765/2025 I", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:128", "num": "766/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:129", "num": "767/2025 I", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:130", "num": "768/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:131", "num": "769/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:132", "num": "770/2025", "cli": "C:Outros clientes", "cid": "D:Hortolândia", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:133", "num": "772/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE / SINALIZAÇÃO SEMAFÓRICA", "st": "S:Só enviada", "fech": false}, {"id": "Q:134", "num": "773/2025", "cli": "C:Outros clientes", "cid": "D:São Paulo", "dept": "P:Outros", "esc": "E:PROJETO GEOMÉTRICO E TERRAPLENAGEM/ DRENAGEM DE ÁGUAS PLUVIAIS/ SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:135", "num": "774/2025", "cli": "C:ADVENTISTA", "cid": "D:Atibaia", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:136", "num": "775/2025", "cli": "C:ADVENTISTA", "cid": "D:Ribeirão Preto", "dept": "P:Outros", "esc": "E:ESTUDO DE VIABILIDADE AMBIENTAL", "st": "S:Fechada", "fech": true}, {"id": "Q:137", "num": "777/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:138", "num": "778/2025 I", "cli": "C:Outros clientes", "cid": "D:Valinhos", "dept": "P:Outros", "esc": "E:CÂMERA MONITORAMENTO", "st": "S:Só enviada", "fech": false}, {"id": "Q:139", "num": "779/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:140", "num": "780/2025", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:141", "num": "781/2025", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:142", "num": "782/2025", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Outros", "esc": "E:ASSESSORIA", "st": "S:Só enviada", "fech": false}, {"id": "Q:143", "num": "783/2025 I", "cli": "C:Outros clientes", "cid": "D:Paulínia", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:144", "num": "784/2026", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:145", "num": "785/2026", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:146", "num": "786/2026", "cli": "C:Outros clientes", "cid": "D:Hortolândia", "dept": "P:Estudos", "esc": "E:ESTUDO DE TRÁFEGO", "st": "S:Só enviada", "fech": false}, {"id": "Q:147", "num": "787/2026 I", "cli": "C:ADVENTISTA", "cid": "D:Ribeirão Preto", "dept": "P:Estudos", "esc": "E:ESTUDO DE TRÁFEGO", "st": "S:Fechada", "fech": true}, {"id": "Q:148", "num": "788/2026", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO SEMAFÓRICA", "st": "S:Só enviada", "fech": false}, {"id": "Q:149", "num": "789/2026", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:150", "num": "790/2026", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Outros", "esc": "E:PROJETO GEOMÉTRICO / PAVIMENTAÇÃO", "st": "S:Fechada", "fech": true}, {"id": "Q:151", "num": "791/2026", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:152", "num": "792/2026", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:153", "num": "793/2026", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Outros", "esc": "E:RELATÓRIO DE IMPACTO NO SISTEMA DE MOBILIDADE", "st": "S:Só enviada", "fech": false}, {"id": "Q:154", "num": "795/2026", "cli": "C:ARBÓREA", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:155", "num": "796/2026", "cli": "C:ARBÓREA", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:156", "num": "797/2026 I", "cli": "C:MRV & CO", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Fechada", "fech": true}, {"id": "Q:157", "num": "799/2026 I", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:158", "num": "800/2026", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:MODERNIZÃO SEMAFÓRICA", "st": "S:Só enviada", "fech": false}, {"id": "Q:159", "num": "802/2026", "cli": "C:COVABRA", "cid": "D:Paulínia", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Fechada", "fech": true}, {"id": "Q:160", "num": "803/2026 I", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Fechada", "fech": true}, {"id": "Q:161", "num": "804/2026", "cli": "C:Outros clientes", "cid": "D:Atibaia", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:162", "num": "805/2026", "cli": "C:Outros clientes", "cid": "D:Atibaia", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:163", "num": "806/2026", "cli": "C:ADVENTISTA", "cid": "D:Atibaia", "dept": "P:Outros", "esc": "E:PROJETO GEOMÉTRICO / DRENAGEM DE ÁGUAS PLUVIAIS / PAVIMENTAÇÃO", "st": "S:Só enviada", "fech": false}, {"id": "Q:164", "num": "807/2026", "cli": "C:ADVENTISTA", "cid": "D:Atibaia", "dept": "P:Outros", "esc": "E:ESTUDO DE VIABILIDADE AMBIENTAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:165", "num": "808/2026", "cli": "C:ARBÓREA", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:166", "num": "809/2026", "cli": "C:HOCH", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:167", "num": "810/2026", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:168", "num": "812/2026", "cli": "C:FA OLIVA", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:169", "num": "813/2026", "cli": "C:DIRECIONAL", "cid": "D:Campinas", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:170", "num": "814/2026", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE/ SINALIZAÇÃO SEMAFÓRICA", "st": "S:Só enviada", "fech": false}, {"id": "Q:171", "num": "815/2026", "cli": "C:MRV & CO", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:EIV/ RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:172", "num": "816/2026", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Fechada", "fech": true}, {"id": "Q:173", "num": "817/2026", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:174", "num": "818/2026 I", "cli": "C:MRV & CO", "cid": "D:Jundiaí", "dept": "P:Outros", "esc": "E:ESTUDO DE VIABILIDADE AMBIENTAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:175", "num": "819/2026 I", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:REVISÃO RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:176", "num": "820/2026", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Estudos", "esc": "E:ESTUDO DE TRÁFEGO", "st": "S:Fechada", "fech": true}, {"id": "Q:177", "num": "821/2026", "cli": "C:HOCH", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:178", "num": "822/2026", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / ACESSIBILIDADE / INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:179", "num": "823/2026 I", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE / SINALIZAÇÃO SEMAFÓRICA", "st": "S:Só enviada", "fech": false}, {"id": "Q:180", "num": "824/2026", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:181", "num": "826/2026", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Fechada", "fech": true}, {"id": "Q:182", "num": "827/2026", "cli": "C:ADVENTISTA", "cid": "D:Ribeirão Preto", "dept": "P:Outros", "esc": "E:ESTUDO DE VIABILIDADE AMBIENTAL", "st": "S:Fechada", "fech": true}, {"id": "Q:183", "num": "828/2026", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Outros", "esc": "E:CONSULTORIA URBANÍSTICA", "st": "S:Só enviada", "fech": false}, {"id": "Q:184", "num": "829/2026", "cli": "C:Outros clientes", "cid": "D:Atibaia", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:185", "num": "830/2026", "cli": "C:MRV & CO", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:EIV", "st": "S:Só enviada", "fech": false}, {"id": "Q:186", "num": "831/2026", "cli": "C:ADVENTISTA", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}, {"id": "Q:187", "num": "832/2026", "cli": "C:Outros clientes", "cid": "D:Jundiaí", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:188", "num": "833/2026", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO SEMAFÓRICA", "st": "S:Fechada", "fech": true}, {"id": "Q:189", "num": "834/2026", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Estudos", "esc": "E:RIT", "st": "S:Só enviada", "fech": false}, {"id": "Q:190", "num": "835/2026", "cli": "C:Outros clientes", "cid": "D:Outras cidades", "dept": "P:Outros", "esc": "E:ESTUDO DE VIABILIDADE AMBIENTAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:191", "num": "836/2026", "cli": "C:Outros clientes", "cid": "D:Valinhos", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL", "st": "S:Só enviada", "fech": false}, {"id": "Q:192", "num": "837/2026", "cli": "C:Outros clientes", "cid": "D:Campinas", "dept": "P:Projetos", "esc": "E:SINALIZAÇÃO VIÁRIA HORIZONTAL E VERTICAL / INFRAESTRUTURA DE TRANSPORTE", "st": "S:Só enviada", "fech": false}]};
@@ -196,9 +271,39 @@ document.getElementById("k-conv").textContent=Math.round(DATA.closed/DATA.total*
 
 /* ====== state ====== */
 let MODE="all";
+let MINPCT=30;                                  // % mínimo de conversão; abaixo = vermelho
+let applied=false;                              // modo "Aplicar": mostra só as fracas
+let recoOn=false;                               // modo "Recomendação": top-N melhores combos
+let recoN=3;                                    // quantas combinações mostrar (máx 5)
+let recoList=[];                                // combos rankeados [{cid,esc,sent,closed,conv,rank}]
+const RECO_MINVOL=4;                            // piso de volume: ignora combos com < N propostas enviadas
+/* melhores combinações Cidade × Escopo por conversão (ignora bucket "Outras cidades") */
+function computeReco(n){
+  const map=new Map();
+  for(const p of DATA.propostas){
+    if(p.cid==="D:Outras cidades")continue;     // bucket agregado não é acionável
+    const key=p.cid+"||"+p.esc;
+    let e=map.get(key);
+    if(!e){e={cid:p.cid,esc:p.esc,sent:0,closed:0};map.set(key,e);}
+    e.sent++;if(p.fech)e.closed++;
+  }
+  const arr=[...map.values()].filter(e=>e.sent>=RECO_MINVOL);
+  arr.forEach(e=>e.conv=e.closed/e.sent);
+  arr.sort((a,b)=>b.conv-a.conv||b.sent-a.sent);   // conversão desc, desempate por volume
+  return arr.slice(0,n).map((e,i)=>({...e,rank:i+1}));
+}
 const facets={dept:null,cidade:null,escopo:null,cliente:null};
 let selProp=null;
 function anyFacet(){return facets.dept||facets.cidade||facets.escopo||facets.cliente;}
+/* conversão real do nó (ignora a aba de status, aplica os outros filtros) */
+function convFor(n){
+  if(n.band==="status"||n.band==="proposta")return null;
+  const k=KEY[n.band];let tot=0,cl=0;
+  for(const p of DATA.propostas){let ok=true;
+    for(const b of FB){if(b===n.band)continue;if(facets[b]&&p[KEY[b]]!==facets[b]){ok=false;break;}}
+    if(ok&&p[k]===n.id){tot++;if(p.fech)cl++;}}
+  return tot?cl/tot:0;
+}
 function propStatus(p){return MODE==="all"?true:MODE==="closed"?p.fech:!p.fech;}
 function propMatch(p,except){
   if(!propStatus(p))return false;
@@ -222,7 +327,7 @@ function countFor(n){
 const graphEl=document.getElementById("graph");
 let W=graphEl.clientWidth;
 const svg=d3.select("#graph").append("svg");
-const gBands=svg.append("g"),gPlinks=svg.append("g"),gSpine=svg.append("g"),gNodes=svg.append("g");
+const gBands=svg.append("g"),gConn=svg.append("g"),gPlinks=svg.append("g"),gReco=svg.append("g"),gSpine=svg.append("g"),gNodes=svg.append("g");
 const PAD=20,PADTOP=12,GAP=12;
 let bands={},ACTIVE=BANDS.slice();
 function layoutBands(){
@@ -252,6 +357,8 @@ const sim=d3.forceSimulation(NODES)
 function curve(x1,y1,x2,y2){const my=(y1+y2)/2;return `M${x1},${y1} C ${x1},${my} ${x2},${my} ${x2},${y2}`;}
 let plink=gPlinks.selectAll("path").data(plinks).join("path").attr("class","plink").style("display","none");
 let spine=gSpine.append("path").attr("class","spine").style("display","none");
+let connLinks=[],clink=gConn.selectAll("path");
+let recoLinks=[],recoLinkSel=null;
 
 let node=gNodes.selectAll("g").data(NODES).join("g").attr("class","node")
   .call(d3.drag()
@@ -264,10 +371,11 @@ node.append("rect").attr("class","pill")
   .attr("fill",d=>d.color).attr("fill-opacity",.16).attr("stroke",d=>d.color);
 node.each(function(d){const g=d3.select(this);const sy=-d.h/2+13;
   d.lines.forEach((ln,i)=>g.append("text").attr("class","lbl").attr("x",-d.w/2+12).attr("y",sy+i*15).text(ln));});
-const trackW=d=>d.w-24,trackX=d=>-d.w/2+12,barY=d=>d.h/2-23;
+const trackW=d=>d.w-24,trackX=d=>-d.w/2+12,barY=d=>d.h/2-24;
 node.append("rect").attr("class","track").attr("x",trackX).attr("y",barY).attr("width",trackW).attr("height",4).attr("rx",2);
-node.append("rect").attr("class","fill").attr("x",trackX).attr("y",barY).attr("height",4).attr("rx",2);
-node.append("text").attr("class","cnt").attr("x",0).attr("y",d=>d.h/2-7);
+node.append("rect").attr("class","fill").attr("x",trackX).attr("y",barY).attr("height",4).attr("rx",2).attr("fill","#34d399");
+node.append("text").attr("class","cntL").attr("x",d=>-d.w/2+12).attr("y",d=>d.h/2-7);
+node.append("text").attr("class","cntR").attr("x",d=>d.w/2-12).attr("y",d=>d.h/2-7);
 
 let spineNodes=[];
 function tick(){
@@ -275,6 +383,14 @@ function tick(){
     d.y=Math.max(b.y0+30+d.h/2,Math.min(b.y1-d.h/2-6,d.y));
     d.x=Math.max(PAD+d.w/2+12,Math.min(W-PAD-d.w/2-12,d.x));});
   plink.attr("d",p=>curve(p.s.x,p.s.y,p.t.x,p.t.y));
+  clink.attr("d",p=>curve(p.s.x,p.s.y,p.t.x,p.t.y));
+  if(recoLinkSel)recoLinkSel.each(function(d){
+    const a=d.s,b=d.t,g=d3.select(this);
+    g.select("path").attr("d",curve(a.x,a.y,b.x,b.y));
+    const mx=(a.x+b.x)/2,my=(a.y+b.y)/2;
+    g.select("circle").attr("cx",mx).attr("cy",my);
+    g.select("text").attr("x",mx).attr("y",my);
+  });
   node.attr("transform",d=>`translate(${d.x},${d.y})`);
   if(spineNodes.length>1){
     let d="";for(let i=0;i<spineNodes.length-1;i++){const a=spineNodes[i],b=spineNodes[i+1];
@@ -291,18 +407,18 @@ function show(n){if(!n._vis){n._vis=true;n.fx=null;n.fy=null;if(!(n.x>0)){n.x=W/
 function refresh(){
   ACTIVE = MODE==="all"?BANDS.slice():BANDS.filter(b=>b!=="status");
   layoutBands();drawBands();
+  if(recoOn){refreshReco();return;}
+  recoLinks=[];recoLinkSel=null;gReco.selectAll("g.rl").remove();   // limpa linhas de recomendação
   // aggregate nodes
-  const maxBy={};
   NODES.forEach(n=>{
     if(n.band==="proposta")return;
     const [tot,cl]=countFor(n);n._val=tot;n._cl=cl;
-    if(ACTIVE.includes(n.band)&&tot>0)show(n);else park(n);
-  });
-  FB.concat(MODE==="all"?["status"]:[]).forEach(b=>{maxBy[b]=d3.max(NODES.filter(n=>n.band===b&&n._vis).map(n=>n._val))||1;});
-  NODES.forEach(n=>{
-    if(n.band==="proposta"||!n._vis)return;
-    if(MODE==="all"){n._frac=n._val?n._cl/n._val:0;n._barc=tier(n._frac);}
-    else{n._frac=n._val/(maxBy[n.band]||1);n._barc=n.color;}
+    n._conv=convFor(n);                          // conversão real (independe da aba)
+    n._weak=(n._conv!=null)&&(n._conv*100<MINPCT);
+    const isFacet=FB.includes(n.band)&&facets[n.band]===n.id;
+    // no modo "Aplicar" só ficam as fracas (+ status e facets ativos)
+    const passApply = !applied || n._weak || isFacet || n.band==="status";
+    if(ACTIVE.includes(n.band)&&tot>0&&passApply)show(n);else park(n);
   });
   // propostas
   const showProps=!!anyFacet();
@@ -314,32 +430,94 @@ function refresh(){
   FB.forEach(b=>{if(facets[b]){const nd=nodeById.get(facets[b]);if(nd&&nd._vis)spineNodes.push(nd);}});
   spineNodes=spineNodes.filter(Boolean).sort((a,b)=>BANDS.indexOf(a.band)-BANDS.indexOf(b.band));
   applyVisuals();
-  spine.style("display",spineNodes.length>1?null:"none");
-  plink.style("display",p=>p.s._vis?null:"none");
+  // caminho selecionado em vermelho se a conversão do cruzamento ficar abaixo do mínimo
+  const [ss,cc]=matchStats();
+  const selWeak=anyFacet()&&ss>0&&(cc/ss*100<MINPCT);
+  // ---- linhas nas bandas de cima: liga cada filtro ativo aos clientes do resultado ----
+  connLinks=[];
+  if(anyFacet()){
+    const facetNodes=FB.map(b=>facets[b]&&nodeById.get(facets[b])).filter(n=>n&&n._vis);
+    const cliNodes=NODES.filter(n=>n.band==="cliente"&&n._vis);
+    facetNodes.forEach(fn=>{ if(fn.band==="cliente")return;
+      cliNodes.forEach(cn=>connLinks.push({s:fn,t:cn})); });
+  }
+  clink=gConn.selectAll("path").data(connLinks).join("path").attr("class","clink")
+       .style("stroke",selWeak?"#ff5b5b":"#9fb4ff").style("stroke-opacity",selWeak?.5:.4);
+  spine.style("display",spineNodes.length>1?null:"none")
+       .style("stroke",selWeak?"#ff3b3b":"#e8ecf5")
+       .style("stroke-opacity",selWeak?.9:.55)
+       .style("stroke-width",selWeak?3.5:2);
+  plink.style("display",p=>p.s._vis?null:"none").style("stroke",selWeak?"#ff5b5b":"#f472b6");
   sim.force("y",d3.forceY(d=>bands[d.band]?bands[d.band].cy:0).strength(.6));
   sim.force("collide",d3.forceCollide(d=>d._vis?d.cr:0).strength(1));
   sim.alpha(.8).restart();
   updateDetail();
 }
+/* ====== modo Recomendação ====== */
+function refreshReco(){
+  recoList=computeReco(recoN);
+  const keep=new Set();
+  recoList.forEach(r=>{keep.add(r.cid);keep.add(r.esc);});
+  // só ficam visíveis as cidades e escopos que entram nas melhores combinações
+  NODES.forEach(n=>{
+    if(keep.has(n.id)&&(n.band==="cidade"||n.band==="escopo")){
+      const [tot,cl]=countFor(n);n._val=tot;n._cl=cl;n._conv=convFor(n);n._weak=false;show(n);
+    }else park(n);
+  });
+  // uma linha dourada por combinação, ligando cidade ↔ escopo, com badge de ranking
+  recoLinks=recoList.map(r=>({s:nodeById.get(r.cid),t:nodeById.get(r.esc),rank:r.rank}));
+  const sel=gReco.selectAll("g.rl").data(recoLinks,d=>d.rank);
+  sel.exit().remove();
+  const ent=sel.enter().append("g").attr("class","rl");
+  ent.append("path").attr("class","recolink");
+  ent.append("circle").attr("class","recobadge-bg").attr("r",13);
+  ent.append("text").attr("class","recobadge").attr("text-anchor","middle").attr("dy",5);
+  recoLinkSel=ent.merge(sel);
+  recoLinkSel.select("text.recobadge").text(d=>d.rank);
+  // esconde as outras conexões / spine
+  clink=gConn.selectAll("path").data([]).join("path");
+  spine.style("display","none");
+  plink.style("display","none");
+  applyVisuals();
+  recoDetail();
+  sim.force("y",d3.forceY(d=>bands[d.band]?bands[d.band].cy:0).strength(.6));
+  sim.force("collide",d3.forceCollide(d=>d._vis?d.cr:0).strength(1));
+  sim.alpha(.8).restart();
+}
 function applyVisuals(){
   node.style("display",d=>d._vis?null:"none");
-  node.select(".cnt").text(d=>d.band==="proposta"?"":d._val);
-  node.select(".fill").attr("width",d=>trackW(d)*Math.max(0,Math.min(1,d._frac||0))).attr("fill",d=>d._barc||d.color);
+  const hasConv=d=>!(d.band==="proposta"||d.band==="status"||d._conv==null);
+  node.select(".cntL").text(d=>d.band==="proposta"?"":d._val);                          // esquerda: nº absoluto
+  node.select(".cntR").text(d=>hasConv(d)?Math.round(d._conv*100)+"%":"");               // direita: % conversão
+  node.select(".track").attr("width",d=>hasConv(d)?trackW(d):0);
+  node.select(".fill").attr("width",d=>hasConv(d)?trackW(d)*Math.max(0,Math.min(1,d._conv||0)):0); // barra verde = conversão
   node.classed("active",d=>(FB.includes(d.band)&&facets[d.band]===d.id));
+  node.classed("reco",d=>recoOn&&d._vis);
+  node.classed("weak",d=>!recoOn&&d._vis&&d.band!=="status"&&d.band!=="proposta"&&d._weak);
   node.classed("dim",false);
 }
 
 /* ====== interaction ====== */
 function clickNode(n){
+  if(recoOn){recoOn=false;syncRecoBtn();}   // sair da recomendação ao começar a explorar
   if(n.band==="proposta"){selProp=(selProp===n.id?null:n.id);updateDetail();return;}
   if(n.band==="status"){const m=n.id==="S:Fechada"?"closed":"open";MODE=(MODE===m?"all":m);syncTabs();selProp=null;refresh();return;}
   facets[n.band]=(facets[n.band]===n.id)?null:n.id;
   selProp=null;refresh();
 }
-function clearAll(){FB.forEach(b=>facets[b]=null);selProp=null;refresh();}
+function clearAll(){FB.forEach(b=>facets[b]=null);selProp=null;if(recoOn)exitReco();else refresh();}
 svg.on("click",clearAll);
 function syncTabs(){document.querySelectorAll("#seg button").forEach(x=>x.classList.toggle("on",x.dataset.m===MODE));}
 document.querySelectorAll("#seg button").forEach(b=>b.addEventListener("click",()=>{MODE=b.dataset.m;syncTabs();selProp=null;refresh();}));
+document.getElementById("minpct").addEventListener("input",e=>{let v=parseFloat(e.target.value);MINPCT=isNaN(v)?0:Math.max(0,Math.min(100,v));if(!recoOn)refresh();});
+document.getElementById("btn-apply").addEventListener("click",()=>{applied=true;document.getElementById("btn-apply").classList.add("on");if(recoOn)exitReco();refresh();});
+document.getElementById("btn-reset").addEventListener("click",()=>{applied=false;document.getElementById("btn-apply").classList.remove("on");if(recoOn)exitReco();else refresh();});
+// ---- Recomendação ----
+function syncRecoBtn(){document.getElementById("btn-reco").classList.toggle("on",recoOn);}
+function enterReco(){recoOn=true;applied=false;document.getElementById("btn-apply").classList.remove("on");FB.forEach(b=>facets[b]=null);selProp=null;syncRecoBtn();refresh();}
+function exitReco(){recoOn=false;syncRecoBtn();hideRecoPanel();refresh();}
+document.getElementById("btn-reco").addEventListener("click",()=>{recoOn?exitReco():enterReco();});
+document.getElementById("reco-n").addEventListener("input",e=>{let v=parseInt(e.target.value,10);recoN=isNaN(v)?3:Math.max(1,Math.min(5,v));if(recoOn)refresh();});
 window.removeFacet=function(b){facets[b]=null;selProp=null;refresh();};
 window.setMode=function(m){MODE=m;syncTabs();selProp=null;refresh();};
 
@@ -358,7 +536,9 @@ function updateDetail(){
   FB.forEach(b=>{if(facets[b]){const nd=nodeById.get(facets[b]);
     chips+=`<span class="chip" title="${nd.label}" style="border-color:${nd.color}"><span class="gl" style="color:${nd.color}">${BANDMETA[b].label}</span>${nd.label}<span class="x" onclick="removeFacet('${b}')">×</span></span>`;}});
   if(!chips)chips=`<span style="color:var(--dim);font-size:12px">nenhum filtro</span>`;
-  const [s,c]=matchStats();const r=s?Math.round(c/s*100):0,col=tier(s?c/s:0);
+  const [s,c]=matchStats();const r=s?Math.round(c/s*100):0;
+  const below=s>0&&r<MINPCT;const col=below?"#f87171":tier(s?c/s:0);
+  const warn=below?`<span style="color:#f87171;font-weight:700;font-size:11.5px;margin-left:8px">⚠ abaixo de ${MINPCT}%</span>`:"";
   // breakdown: clientes da interseção
   const cliCounts={};
   for(const p of DATA.propostas)if(propMatch(p,null))cliCounts[p.cli]=(cliCounts[p.cli]||0)+1;
@@ -374,7 +554,7 @@ function updateDetail(){
           <div class="stat"><div class="n" style="color:${col}">${r}%</div><div class="l">Conversão</div></div>
         </div>
       </div>
-      <div class="d-conn"><div class="hd">Clientes nessa seleção  ·  ↓ propostas na banda de baixo</div>
+      <div class="d-conn"><div class="hd">Clientes nessa seleção  ·  ↓ propostas na banda de baixo ${warn}</div>
         <div class="d-pills"><div class="d-grp">${cliPills||'<span style="color:var(--dim);font-size:12px">nenhuma proposta bate com esse cruzamento</span>'}</div></div></div>
     </div>`;
   document.getElementById("detail").style.borderBottomColor="#7dd3fc";
@@ -409,6 +589,31 @@ function idleDetail(){
        <span class="it"><span class="sw" style="background:var(--lo)"></span>&lt;30%</span></div></div>`;
   document.getElementById("detail").style.borderBottomColor="var(--line)";
 }
+const recoPanelEl=document.getElementById("reco-panel");
+function showRecoPanel(){recoPanelEl.classList.add("visible");graphEl.style.bottom="82px";}
+function hideRecoPanel(){recoPanelEl.classList.remove("visible");recoPanelEl.innerHTML="";graphEl.style.bottom="0";}
+function recoDetail(){
+  showRecoPanel();
+  if(!recoList.length){
+    recoPanelEl.innerHTML=`<div class="reco-title">★ Recomendação<small>Nenhuma combo com ≥${RECO_MINVOL} propostas</small></div>
+      <span class="reco-close" onclick="exitReco()">×</span>`;
+    return;
+  }
+  const cards=recoList.map(r=>{
+    const conv=Math.round(r.conv*100);
+    const cid=(nodeById.get(r.cid)||{}).label||r.cid.slice(2);
+    const esc=(nodeById.get(r.esc)||{}).label||r.esc.slice(2);
+    return `<div class="reco-card">
+      <span class="reco-rk">${r.rank}</span>
+      <span class="reco-city">${cid}</span><span class="reco-sep">×</span>
+      <span class="reco-esc" title="${esc}">${esc}</span>
+      <span class="reco-conv">${conv}%</span>
+      <span class="reco-vol">${r.closed}/${r.sent}</span>
+    </div>`;}).join("");
+  recoPanelEl.innerHTML=`<div class="reco-title">★ Top ${recoN}<small>melhores combos</small></div>
+    ${cards}<span class="reco-close" onclick="exitReco()">×</span>`;
+}
+window.exitReco=exitReco;
 window.clickById=function(id){clickNode(nodeById.get(id));};
 window.clearProp=function(){selProp=null;updateDetail();};
 
